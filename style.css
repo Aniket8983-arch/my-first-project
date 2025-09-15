@@ -1,0 +1,74 @@
+:root{
+  --bg:#f6f7fb;
+  --card:#fff;
+  --accent:#5b6cff;
+  --muted:#666;
+  --danger:#e74c3c;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, Arial, sans-serif;
+  background:var(--bg);
+  color:#111;
+  display:flex;
+  min-height:100vh;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.container{
+  width:100%;
+  max-width:520px;
+  background:var(--card);
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 6px 20px rgba(15,15,30,0.06);
+}
+
+h1{margin:0 0 14px 0; font-size:22px}
+
+#task-form{display:flex; gap:8px; margin-bottom:12px}
+#task-input{
+  flex:1;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9f0;
+  font-size:14px;
+}
+#add-btn{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+#task-list{list-style:none; padding:0; margin:0}
+.task{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #f0f2f7;
+  margin-bottom:8px;
+}
+.task .left{display:flex; gap:10px; align-items:center}
+.task .text{font-size:14px}
+.task.completed .text{ text-decoration:line-through; color:var(--muted) }
+
+.btn{
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.controls{display:flex; gap:10px; margin-top:12px}
+.controls button{padding:8px 10px; border-radius:8px; border:1px solid #e6e9f0; cursor:pointer}
+footer{margin-top:14px; color:var(--muted); font-size:12px}
